@@ -122,7 +122,7 @@ public class RecipeResource {
     @GET
     @Produces("application/pdf")
     @Path("pdf")
-    public byte[] getImage(@QueryParam("name") String name, @QueryParam("products") String products) throws IOException {
+    public byte[] getPdf(@QueryParam("name") String name, @QueryParam("products") String products) throws IOException {
         return fileService.downloadRecipeProductsPdf(name, products);
     }
 }
